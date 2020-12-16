@@ -1,7 +1,7 @@
 import imagesData from "./gallery-items.js";
 
-const jsGalleryRef = document.querySelector(".gallery");
-
+// Создаю разметку страницы//
+const jsGalleryRef = document.querySelector(".js-gallery");
 const boxGalleryItem = ({ preview, original, description }, index) => {
   const galleryItem = document.createElement("li");
   const galleryLink = document.createElement("a");
