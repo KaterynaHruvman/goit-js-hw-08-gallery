@@ -1,6 +1,6 @@
-import imagesData from "./gallery-items";
+import imagesData from "./gallery-items.js";
 
-const jsGalleryRef = document.querySelector("js-gallery");
+const jsGalleryRef = document.querySelector(".js-gallery");
 
 const boxGalleryItem = ({ preview, original, description }, index) => {
   const galleryItem = document.createElement("li");
@@ -19,9 +19,9 @@ const boxGalleryItem = ({ preview, original, description }, index) => {
   galleryLink.appendChild(galleryImage);
   galleryItem.appendChild(galleryLink);
   jsGalleryRef.appendChild(galleryItem);
-
   return galleryItem;
 };
+
 const galleryMaker = (images) => {
   const galleryBoxHtml = images.map((item, i) => boxGalleryItem(item, i));
   jsGalleryRef.append(...galleryBoxHtml);
