@@ -1,7 +1,8 @@
 import imagesData from "./gallery-items.js";
 
-// Создаю разметку страницы//
-const jsGalleryRef = document.querySelector(".js-gallery");
+// Создаю разметку страницы. доавляем новые элементы в список//
+
+const jsGalleryRef = document.querySelector(".gallery");
 const boxGalleryItem = ({ preview, original, description }, index) => {
   const galleryItem = document.createElement("li");
   const galleryLink = document.createElement("a");
@@ -36,7 +37,7 @@ const refs = {
   image: document.querySelector(".lightbox__image"),
   button: document.querySelector(".lightbox__button"),
 };
-
+//Слушатель события на клик //
 jsGalleryRef.addEventListener("click", openModal);
 
 function openModal(event) {
